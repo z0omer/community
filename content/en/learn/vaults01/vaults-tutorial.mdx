@@ -1,0 +1,266 @@
+---
+title: Tutorial
+order: 1
+hideLanguageSelector: true
+keywords: "format, event, events, meetup, meetups, guide, agenda"
+description: "Vaults are a tool that let the owner deposit collateral and generate Dai."
+---
+
+# Vaults Tutorial
+
+A Vault is a tool that lets the owner deposit collateral and generate Dai.
+
+## Walking Through Oasis Borrow
+
+<Indent>
+
+[Oasis Borrow](https://oasis.app/borrow) is the Maker Foundation’s front-end application for creating and interacting with Vaults. Users can open a Vault, generate and repay Dai, track collateral prices, send and receive tokens, and monitor global Dai and Vault statistics through this application.
+
+As a web3 application, accessing Oasis requires a compatible wallet. For the most up to date list simply visit the Oasis site, the prompt to connect a wallet will provide you with all the current options. The most popular wallets like MetaMask, Trezor, and Ledger are compatible. When using your wallet, you are interacting with the Maker Protocol. Oasis Borrow provides a non-custodial infrastructure for your activities on the Maker Protocol layer.
+
+</Indent>
+
+<Accordion defaultOpen>
+
+### Getting Started
+
+<Process>
+
+<Box>
+
+#### Go Over to Oasis
+
+On the [Oasis landing page](https://oasis.app/), click <Button disabled small outline inline to="/">Borrow Dai</Button> to get started.
+
+![Oasis Choices](/images/vault-onboarding-2.png)
+
+</Box>
+
+<Box>
+
+#### Connecting a Wallet
+
+Connect to a wallet from the listed options and accept the connection request. This example uses MetaMask, but other wallets operate similarly. Make sure the wallet contains some ETH to pay for transactions when creating or interacting with Vaults.
+
+<InfoBlock>
+
+![Connect Wallet](/images/vault-onboarding-3.png)
+
+![Connect Wallet Request](/images/vault-onboarding-4.png)
+
+</InfoBlock>
+
+Connecting to Oasis is free. However, the connection process will need to be repeated for each new session once the wallet is disconnected.
+
+</Box>
+
+<Box>
+
+#### Oasis Borrow Dashboard
+
+The Oasis Borrow Dashboard appears once a wallet is connected. Any existing Vaults associated with the wallet will appear here.
+
+<Image
+  src="/images/vault-onboarding-5.png"
+  sx={{ size: ["unset", "unset", "90%"] }}
+/>
+
+The top right-hand panel displays information about the connected wallet, including token balances. The menu below lists information about the global state of Vaults and [the prices of relevant assets.](/learn/Oracles/)
+
+<InfoBlock>
+
+![Wallet Information Panel](/images/vault-onboarding-6.png)
+
+![Global System Information Panel](/images/vault-onboarding-7.png)
+
+</InfoBlock>
+
+</Box>
+
+<Box>
+
+#### Opening a Vault
+
+To open a new Vault, click <Button disabled small outline inline to="/">Get Started</Button> on the dashboard.
+
+<Image
+  src="/images/vault-onboarding-8.png"
+  sx={{ size: ["unset", "unset", "50%"] }}
+/>
+
+Select a collateral type for this Vault. Make note of the information about the [Stability Fee](/learn/vaults/stability-fees/), [Liquidation Ratio](/learn/vaults/liquidation#liquidation-ratio), and [Liquidation Penalty](/learn/vaults/liquidation#liquidation-penalty). These are important risk parameters which you should understand as well as be able to apply to your specific situation. When ready, click <Button disabled small outline inline to="/" >Continue</Button>
+
+![Select a Collateral Type](/images/vault-onboarding-9.png)
+
+This page configures the Vault for easy management. This step only needs to be done once. Click <Button disabled small outline  inline to="/" >Setup</Button> and confirm the transaction on the wallet. Using Metamask, each transaction screen will look similar to the screenshot below:
+
+![MetaMask Transaction Screen](/images/vault-onboarding-10.jpg)
+
+Grant the Maker Protocol permission to interact with collateral. Click <Button  disabled small outline inline to="/" >Set </Button> and approve the transaction on the wallet. This process must be repeated for each new collateral type. Click <Button disabled small outline inline to="/" >Continue</Button> once everything is ready.
+
+<Image
+  src="/images/vault-onboarding-11.png"
+  sx={{ size: ["unset", "unset", "80%"] }}
+/>
+
+Now that the Vault is set up, decide how much collateral to deposit to your Vault in the Maker Protocol and the amount of Dai to generate. Make a note of the Vault’s parameters. Click <Button disabled small outline inline to="/" >Continue</Button> when ready.
+
+<List>
+
+<Box>
+
+**Note the Collateralization Ratio and the Liquidation Price:**
+
+The Liquidation price should be comfortably below the collateral’s current price, depending on individual risk tolerance. If the collateral’s market price falls below the Liquidation price, the Vault will be liquidated and subject to the Liquidation Fee. Collateral will be sold for Dai until the Dai balance and Liquidation Fee are repaid.
+
+</Box>
+
+<Box>
+
+**Note the Stability Fee:**
+
+The SF is a variable rate that is subject to weekly changes by Maker Governance. Users are encouraged to take advantage of trusted online tools to help stay up-to-date with the latest Stability Fee rates.
+
+</Box>
+
+</List>
+
+<Image
+  src="/images/vault-onboarding-12.png"
+  sx={{ size: ["unset", "unset", "80%"] }}
+/>
+
+Make sure the Vault parameters are satisfactory. Read and agree to the Terms of Service and acknowledge understanding that the Stability Fee is not a fixed rate. When ready, click <Button disabled small outline inline to="/" >Open Vault</Button> and approve the transaction on the wallet.
+
+<Image
+  src="/images/vault-onboarding-13.png"
+  sx={{ size: ["unset", "unset", "75%"] }}
+/>
+
+**Congratulations!**
+
+The Vault is ready. Newly generated Dai will appear in the wallet.
+
+<Image
+  src="/images/vault-onboarding-14.png"
+  sx={{ size: ["unset", "unset", "60%"] }}
+/>
+
+Hit <Button disabled small outline inline to="/" >Exit</Button> to return to the main Oasis Dashboard. The dashboard will display an overview of the Vault’s current state. Log in to Oasis with the same wallet to view the same Vaults in the future.
+
+<Image
+  src="/images/vault-onboarding-15.png"
+  sx={{ size: ["unset", "unset", "80%"] }}
+/>
+
+</Box>
+
+</Process>
+
+</Accordion>
+
+<Accordion defaultOpen>
+
+### Managing a Vault
+
+Active Vaults can be managed from the main dashboard. Each Vault type is managed separately and accessible through the left side-bar. Users are able to payback or generate Dai, withdraw or deposit collateral, or view the Vault history. Click <Button disabled small outline inline to="/" >Manage</Button> to bring up the Vault manager dashboard.
+
+<Image
+  src="/images/vault-onboarding-16.png"
+  sx={{ size: ["unset", "unset", "90%"] }}
+/>
+
+</Accordion>
+
+<Accordion defaultOpen>
+
+### Generating More Dai
+
+To generate more Dai, click <Button disabled small outline inline to="/" >Generate</Button> on the dashboard and fill in the requested information. The maximum available to generate is displayed for reference.
+
+<Callout icon="warning">
+
+**Please Note**
+
+Generating additional Dai without subsequently adding additional collateral will result in a lower Liquidation Price putting the Vault at higher risk for liquidation.
+
+</Callout>
+
+Check the preview to make sure the Vault's new terms are acceptable. Click <Button disabled small outline inline to="/" >Generate</Button> and follow prompts to confirm the transaction. Once approved, the Vault's dashboard will update to reflect the changes.
+
+<Image
+  src="/images/vault-onboarding-17.png"
+  sx={{ size: ["unset", "unset", "40%"] }}
+/>
+
+</Accordion>
+
+<Accordion defaultOpen>
+
+### Adding Collateral
+
+Adding Collateral is useful in two scenarios. The first is when a Vault is coming close to being [liquidated](/learn/vaults/liquidation/), adding collateral can save the Vault. The second is when a Vault owner wants to increase their capacity for generating Dai, adding collateral will increase the maximum amount of Dai that can be generated.
+
+To add collateral, click <Button disabled small outline inline to="/" >Deposit</Button> from the dashboard and fill in the desired amount.
+
+Check the preview to make sure the Vault's new terms are acceptable. Click <Button disabled small outline inline to="/" >Deposit</Button> and follow prompts to confirm the transaction. Once approved, the Vault’s dashboard will update to reflect the changes.
+
+<Image
+  src="/images/vault-onboarding-15.png"
+  sx={{ size: ["unset", "unset", "90%"] }}
+/>
+
+</Accordion>
+
+<Accordion defaultOpen>
+
+### Paying Back Dai
+
+Paying back Dai is useful in a number of situations. Similarly to adding collateral, paying back Dai is a [more efficient](/learn/vaults/liquidation#liquidation-price) way to save a Vault from liquidation. Additionally, paying back Dai is especially appropriate when a Vault owner thinks the Stability Fee is too high and wants to decrease the size of their position, the Vault is no longer needed, or when collateral needs to be freed.
+
+To pay back Dai, click <Button disabled small outline inline to="/" >Pay Back</Button> from the dashboard to bring up the menu below. Please note that when paying back Dai for the first time, a one-time transaction to unlock it needs to occur. Clicking the <Button disabled small outline inline to="/" >Unlock DAI to Continue</Button> switch above the <Button disabled small outline inline to="/" >Pay Back</Button> button will bring up this transaction.
+
+Check the preview to make sure the Vault's new terms are acceptable. Click <Button disabled small outline inline to="/" >Pay Back</Button> and follow prompts to confirm the transaction. Once approved, the Vault’s dashboard will update automatically to reflect the changes.
+
+<Image
+  src="/images/vault-onboarding-19.png"
+  sx={{ size: ["unset", "unset", "40%"] }}
+/>
+
+</Accordion>
+
+<Accordion defaultOpen>
+
+### Withdrawing Collateral
+
+To withdraw collateral from a Vault and return it to the wallet, click <Button disabled small outline inline to="/" >Withdraw</Button> on the dashboard and enter an amount to withdraw. The maximum available to withdraw is displayed for reference.
+
+<Callout icon="warning">
+
+**Please Note**
+
+Withdrawing collateral without first paying back Dai will result in a lower Liquidation Price putting the Vault at higher risk for liquidation.
+
+</Callout>
+
+Check the preview to make sure the Vault's new terms are acceptable. Click <Button disabled small outline inline to="/" >Withdraw</Button> and follow prompts to confirm the transaction. Once approved, the Vault dashboard will update to reflect the changes. Withdrawn collateral will appear in the wallet, unlocked, and ready for use.
+
+<Image
+  src="/images/vault-onboarding-20.png"
+  sx={{ size: ["unset", "unset", "40%"] }}
+/>
+
+</Accordion>
+
+<Accordion defaultOpen>
+
+### Viewing Vault History
+
+Find the Vault’s complete history listed below the dashboard. Scroll through to see a chronological record of its activity. Studying the Vault history can be a useful reference when reflecting on forgotten decisions and actions. One could also access other [3rd party websites and tools](https://awesome.makerdao.com#monitor-vaults) for tracking this information.
+
+<Image
+  src="/images/vault-onboarding-21.png"
+  sx={{ size: ["unset", "unset", "90%"] }}
+/>
+
+</Accordion>
