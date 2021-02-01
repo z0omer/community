@@ -1,79 +1,104 @@
 ---
-title: Stability Fees
-order: 3
+title: Governance
+order: -3
 hideLanguageSelector: true
 keywords: "format, event, events, meetup, meetups, guide, agenda"
-description: "Stability Fees are a Risk Parameter designed to address the risk in generating Dai against collateral in Maker Vaults."
+description: "Learn about Vaults where owners can deposit collateral to generate Dai."
 ---
 
-# Stability Fee
+# Governance Curriculum
 
----
+<InfoBlock>
 
-The Stability Fee is a variable-rate fee continuously added to a Vault owner’s generated Dai balance.
+![Vaults](/images/illustrations/Astro-2.png)
 
-Stability Fees are a Risk Parameter designed to address the inherent risk in generating Dai against collateral in Maker Vaults.
+<Box>
 
-A portion of the Stability Fee is diverted toward sustaining the operation of the Maker Protocol, which includes the DSR, Risk Teams, and other costs associated with maintaining the protocol.
+## Learn about Governance lorem ipsum
 
-Technical documentation on Stability Fees can be found in the [Jug - Detailed Documentation](https://docs.makerdao.com/smart-contract-modules/rates-module/jug-detailed-documentation) subsection of the [Documentation Portal](https://docs.makerdao.com/).
+</Box>
 
-## Stability Fee Rates
+</InfoBlock>
 
-<Indent pad={2}>
+Learn about Governance lorem ipsum
 
+<Column>
 
-The Stability Fee for each Vault type changes as a result of the decisions of MKR token holders who govern the protocol.
+<Box>
 
-These decisions are based on the recommendation of Risk Teams who perform risk assessments on Collateral used in the system.
+<Aligner center>
 
-The Risk Teams may update their proposed Stability Fee when something fundamental changes about the underlying asset or the system as a whole.
+## 101
 
-</Indent>
+</Aligner>
 
+- What are Maker Vaults?
 
-## Where Stability Fees Go
+<Aligner center>
 
-<Indent pad={2}>
+### [Governance 101](/learn/vaults03/vaults101/)
 
+</Aligner>
 
-Stability Fees are collected inside the Maker Protocol’s [internal balance sheet](https://docs.makerdao.com/smart-contract-modules/core-module/vat-detailed-documentation).
+</Box>
 
-Once the maximum level of surplus is reached, the system automatically sends Dai to a [Surplus Auction](https://docs.makerdao.com/auctions/the-auctions-of-the-maker-protocol#surplus-auction). During this auction, Keepers bid in MKR for DAI. Dai is released to the winning bidder while the MKR paid by the winner gets burned.
+<Box>
 
-</Indent>
+<Aligner center>
 
+## 201
 
-## Calculating Stability Fees
+</Aligner>
 
-<Indent pad={2}>
+- What are the different types of Maker Vaults?
+- What are Risk Parameters?
 
+<Aligner center>
 
-The Stability Fee is continuously compounding interest at a growth rate of x% per second.
+### [Governance 201](/learn/vaults03/vaults201/)
 
-Technical documentation about how Rates work in the Maker Protocol can be found in the [Rates Module](https://docs.makerdao.com/smart-contract-modules/rates-module) section of our Documentation Portal
+</Aligner>
 
-</Indent>
+</Box>
 
+</Column>
 
-<Callout icon="lightbulb">
+<Column>
 
+<Box>
 
-#### Example
+<Aligner center>
 
-If the Stability Fee is set to 2%, it will accumulate at 1.0000000006279371924910298109948‬% per second. At the end of year one, the user will owe exactly 2% on the principal.
+## 301
 
-Assuming the user put in 100 Dai, at the end of year one they would have 102.00. At the end of year two, they would have 104.04.
+</Aligner>
 
-</Callout>
+- What risks are associated with owning a Vault?
 
+<Aligner center>
 
-## Stability Fees During Emergency Shutdown
+### [Governance 301](/learn/vaults03/vaults301/)
 
-<Indent pad={2}>
+</Aligner>
 
+</Box>
 
-During Emergency Shutdown, Vault owners indirectly pay Stability Fees by not being able to withdraw more collateral than the excess in their Vault.
+<Box>
 
-</Indent>
+<Aligner center>
 
+## Reference
+
+</Aligner>
+
+- [Glossary]()
+- Emergency Shutdown
+- Maker Protocol
+  - System Parameters
+- Risk
+  - Liquidation
+- [Tutorial](/learn/vaults03/vaults-tutorial.mdx/)
+
+</Box>
+
+</Column>

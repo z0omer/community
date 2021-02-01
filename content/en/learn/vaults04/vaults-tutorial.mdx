@@ -1,51 +1,105 @@
 ---
-title: Vaults Tutorial
-order: 1
+title: Vaults
+order: -3
 hideLanguageSelector: true
 keywords: "format, event, events, meetup, meetups, guide, agenda"
-description: "Vaults are a tool that let the owner deposit collateral and generate Dai."
+description: "Learn about Vaults where owners can deposit collateral to generate Dai."
 ---
 
-# Vaults Tutorial
+# MakerDAO Curriculum
 
-A Vault is a tool that lets the owner deposit collateral and generate Dai.
+<InfoBlock>
 
-## Vault Types
+![Vaults](/images/illustrations/Astro-2.png)
 
-Vaults are categorized by the type of collateral used to generated Dai. Users create Dai by generating it against their collateral and destroy Dai when repaying their generated Dai balance.
+<Box>
 
-The process of generating Dai happens entirely on-chain, which enables anyone to audit the amount of circulating Dai and the collateral backing it.
+## Put your crypto to work. Generate Dai with Maker Vaults.
 
-For a current list of Collateral types and Vault types, please visit [Oasis Borrow](https://oasis.app/borrow) or try one of these [other Maker Vault front-ends](https://awesome.makerdao.com/#third-party-vault-portals).
+</Box>
 
-## Collateralization
+</InfoBlock>
 
-Vaults are required to be overcollateralized and have a [Liquidation Ratio](/learn/vaults/liquidation/) that Vault owners need to uphold to avoid the Liquidation of their positions.
+Users create Dai by generating it against their collateral and destroy Dai when repaying their generated Dai balance. Vaults are categorized by the type of collateral used to generated Dai.
 
-Additionally, a Debt Ceiling is imposed on the Maker Protocol as well as each Vault type. The Debt Ceiling is the maximum amount of Dai that can be generated.
+<Column>
 
-The Global Debt Ceiling limits the amount of Dai that can be generated across the entire system, while Vault-specific Debt-Ceilings limit how much Dai each type of Vault can generate.
+<Box>
 
-## Stability Fees
+<Aligner center>
 
-The [Stability Fee](/learn/vaults/stability-fees/) is a variable-rate fee continuously added to a Vault owner’s generated Dai balance.
+## 101
 
-## Emergency Shutdown Module
+</Aligner>
 
-The Emergency Shutdown Module(ESM) provides a process for shutting down the Maker Protocol and distributing collateral to Dai holders and Vault owners.
+- What are Maker Vaults?
+- Why use Maker Vaults?
 
-To trigger an Emergency Shutdown, a minimum threshold of 50,000 MKR must be placed into the ESM. All MKR placed in the ESM can only be retrieved after redeployment as a decision of MKR governors.
+<Aligner center>
 
-![Emergency Shutdown Module](https://i.imgur.com/QM63vjM.png)
+### [Vaults 101](/learn/vaults03/vaults101/)
 
-Activating an Emergency Shutdown:
+</Aligner>
 
-- Locks the System
+</Box>
 
-- Freezes the Dai Savings Rate
+<Box>
 
-- Prohibits Vault Creation/Dai Generation
+<Aligner center>
 
-- Freezes Reference Prices
+## 201
 
-During an Emergency Shutdown, excess collateral is made available to Vault owners. Once collateral auctions are concluded, any remaining collateral in the Vaults is made available for redemption by Dai holders.
+</Aligner>
+
+- What are the different types of Maker Vaults?
+- What are Risk Parameters?
+
+<Aligner center>
+
+### [Vaults 201](/learn/vaults03/vaults201/)
+
+</Aligner>
+
+</Box>
+
+</Column>
+
+<Column>
+
+<Box>
+
+<Aligner center>
+
+## 301
+
+</Aligner>
+
+- What risks are associated with owning a Vault?
+
+<Aligner center>
+
+### [Vaults 301](/learn/vaults03/vaults301/)
+
+</Aligner>
+
+</Box>
+
+<Box>
+
+<Aligner center>
+
+## Reference
+
+</Aligner>
+
+- [Glossary]()
+- Emergency Shutdown
+- Maker Protocol
+  - System Parameters
+- Risk
+  - Liquidation
+- [Tutorial](/learn/vaults03/vaults-tutorial.mdx/)
+
+</Box>
+
+</Column>
