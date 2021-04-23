@@ -6,6 +6,8 @@ The Dai Savings Rate (DSR) is a variable rate of accrual earned by locking Dai i
 
 The DSR is also a monetary policy tool used by Maker governance to influence demand for Dai.
 
+Free money :)
+
 ## How does the DSR work?
 
 Dai holders can lock their Dai into the DSR smart contract at any time. Once locked, Dai continuously accrues to the users balance, based on the current DSR.
