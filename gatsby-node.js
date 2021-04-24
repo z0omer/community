@@ -120,7 +120,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   createRedirect({
     fromPath: "/contributing",
-    toPath: `/${FALLBACK_LOCALE}/contribute/`,
+    toPath: `/${FALLBACK_LOCALE}/programs/`,
   });
 
   createRedirect({
@@ -197,6 +197,25 @@ exports.createPages = async ({ graphql, actions }) => {
     fromPath: "/governance/governance-tools",
     toPath: `/${FALLBACK_LOCALE}/learn/governance/participate`,
   });
+
+  createRedirect({
+    fromPath: "en/funding",
+    toPath: `/${FALLBACK_LOCALE}/programs`,
+  });
+
+  createRedirect({
+    fromPath: "en/contribute/",
+    toPath: `/${FALLBACK_LOCALE}/programs`,
+  });
+
+  createRedirect({
+    fromPath: "en/funding/meetup-funding",
+    toPath: `/${FALLBACK_LOCALE}/programs/meetups/meetup-funding`,
+  });
+
+
+
+
 };
 
 exports.onCreatePage = async ({ page, actions }) => {
