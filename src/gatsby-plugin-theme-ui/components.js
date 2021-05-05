@@ -1,5 +1,17 @@
 /** @jsx jsx */
-
+import { Icon } from "@makerdao/dai-ui-icons";
+import { Authors } from "@modules/authors";
+import {
+  BlogHome
+} from '@modules/blog'
+import { Link } from "@modules/navigation/";
+import {
+  TDDonut,
+  TDPie,
+  TDRadial,
+  TDRegion,
+  TDStat,
+} from "@modules/transparency_dash";
 import {
   Accordion,
   Button,
@@ -9,22 +21,18 @@ import {
   Chocolate,
   Code,
   Column,
-  Heading,
   InfoBlock,
-  Link,
   List,
   Process,
   StatusBanner,
   Table,
   Tout,
-  TransparencyDash,
-} from '@atoms';
-import { Aligner, Indent, Video } from '@modules/utility/';
-import { Authors, Blog } from '@templates';
-import { Box, Divider, Flex, Image, Text, jsx } from 'theme-ui';
+} from "@modules/ui/";
+import { Aligner, Indent, Video } from "@modules/utility/";
+import { motion } from "framer-motion";
+import { Box, Divider, Flex, Image, jsx, Text } from "theme-ui";
 
-import { Icon } from '@makerdao/dai-ui-icons';
-import { motion } from 'framer-motion';
+import { Heading } from "../modules/ui/heading";
 
 //Markdown Component overrides
 //Replace MDX html defaults with our custom implementation.
@@ -44,12 +52,12 @@ const MD_Overrides = {
   p: (props) => (
     <Text
       sx={{
-        mb: '16px',
-        fontSize: '16px',
-        letterSpacing: '0.4px',
-        lineHeight: '150%',
-        marginBottom: '24px',
-        '& .button': { display: 'inline-block' },
+        mb: "16px",
+        fontSize: "16px",
+        letterSpacing: "0.4px",
+        lineHeight: "150%",
+        marginBottom: "24px",
+        "& .button": { display: "inline-block" },
       }}
       {...props}
     />
@@ -85,16 +93,16 @@ const Custom_Components = {
   Tout,
   Column,
   Video,
-  TDRegion: TransparencyDash.Region,
-  TDStat: TransparencyDash.Stat,
-  TDDonut: TransparencyDash.Donut,
-  TDPie: TransparencyDash.Pie,
-  TDRadial: TransparencyDash.Radial,
+  TDRegion,
+  TDStat,
+  TDDonut,
+  TDPie,
+  TDRadial,
   Authors,
   motionDiv: motion.div,
   motionUL: motion.ul,
   motionLI: motion.li,
-  Blog,
+  BlogHome
 };
 
 export default {
